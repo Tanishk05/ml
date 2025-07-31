@@ -2,15 +2,17 @@ from setuptools import setup, find_packages
 
 HYPHEN_E_DOT = "-e ."
 
+
 def get_requirements():
     requirements = []
-    with open('requirements.txt') as f:
+    with open("requirements.txt") as f:
         requirements = f.read().splitlines()
 
     if HYPHEN_E_DOT in requirements:
         requirements.remove(HYPHEN_E_DOT)
 
     return requirements
+
 
 setup(
     name="mlproject",
